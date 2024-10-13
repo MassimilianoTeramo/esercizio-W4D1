@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8b808880df.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <!-- LEFT SIDE -->
+        <div id="navleft"> <img src="img/logo.png" alt="logo" id="logo">
+            <p>home</p>
+            <p>Company reviews</p>
+            <p>Salary guide</p>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div id="navright">
+
+            <span>Sign in</span>
+
+            <p>Employers/Post Job</p>
+        </div>
+    </nav>
+    <div id="searchField">
+
+        <div>
+            <label for="Input1"><i class="fa-solid fa-magnifying-glass"></i></label>
+            <input type="text" id="Input1" placeholder="Job title, keywords or company">
+        </div>
+        <div style="border-right: 1px solid grey; height: 30px ;"></div>
+        <div>
+            <label for="Input2"><i class="fa-solid fa-location-dot"></i></label>
+            <input type="text" id="Input2" placeholder="City or Postcode">
+        </div>
+        <div id="bottoni">
+        <button id="reSearch">Find Job</button>
+        <button id="reset" onclick="resetData()">Reset</button>
+        </div>
+
+
+    </div>
+    <div id="lavoriTrovati">
+
+    </div>
+
+    <div id="risultati">
+        <div id="listalavori">
+
+        </div>
+        <div id="listaluoghi">
+
+        </div>
+
+
+    </div>
+
+
+   
+    <script src="newscript.js"></script>
+</body>
+
+</html>

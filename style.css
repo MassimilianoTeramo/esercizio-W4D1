@@ -1,0 +1,200 @@
+nav {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(209, 208, 208, 0.297);
+    margin-top: 0;
+    margin-bottom: 20px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+
+
+}
+
+nav img {
+    width: 170px;
+}
+
+#navleft {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    font-size: large;
+}
+
+#navright {
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+    margin-right: 20px;
+    align-items: center;
+
+}
+
+#navright span {
+    color: blue;
+    font-size: large;
+    border-right: 1px solid rgb(58, 57, 57);
+    padding-right: 20px;
+
+}
+
+#searchField {
+    width: 900px;
+    height: 70px;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    background-color: white;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+#searchField::after,
+#searchField::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 70%, rgba(5, 87, 187, 0.923));
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 7px;
+    animation: 4s spin linear infinite;
+}
+
+#searchField::before {
+    filter: blur(0.2rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg
+    }
+}
+
+#searchField i {
+    font-size: larger;
+    margin-right: 20px;
+}
+
+#Input1 {
+    height: 60px;
+    width: 270px;
+    border: none;
+    margin-left: 10px;
+    color: rgba(105, 104, 104, 0.523);
+    outline: none;
+    font-size: large;
+   
+    
+}
+#Input1 :clicked {
+    border: none;
+}
+
+#Input2 {
+    height: 60px;
+    width: 270px;
+    border: none;
+    font-size: large;
+    color: rgba(105, 104, 104, 0.523);
+    outline: none;
+
+
+}
+
+#Input:active {
+    initial-value: none;
+}
+
+#bottoni {
+    display: flex;
+    gap: 20px;
+    align-items:end;
+}
+
+#reSearch {
+    background-color: rgba(5, 87, 187, 0.923);
+    color: white;
+    height: 50px;
+    width: 110px;
+    border-radius: 10px;
+    font-size: larger;
+    cursor: pointer;
+}
+
+#reset {
+    background-color: rgb(185, 22, 22);
+    color: white;
+    justify-self: end;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 20px;
+
+}
+
+
+#risultati {
+
+    margin: auto;
+    width: 1000px;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 50px;
+    display: flex;
+    flex-direction: row;
+    font-size: larger;
+
+}
+
+#listalavori li {
+    list-style-type: none;
+    color: rgba(5, 87, 187, 0.923);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.402);
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#listaluoghi li {
+    list-style-type: none;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.402);
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#lavoriTrovati {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
